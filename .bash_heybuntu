@@ -1,0 +1,29 @@
+if [ "$UID" = "0" ]; then
+	# for root user
+    PS1="\n\[\e[1;37m\][\[\e[m\] \[\e[1;31m\]\u\[\e[1;34m\]@\[\e[1;31m\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;37m\]]\[\e[m\]\n\[\e[1;31m\]\\$\[\e[m\] "
+else
+	# for other users
+    PS1="\n\[\e[1;37m\][\[\e[m\] \[\e[1;32m\]\u\[\e[1;34m\]@\[\e[1;32m\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;37m\]]\[\e[m\]\n\[\e[1;32m\]\\$\[\e[m\] "
+fi
+
+
+
+
+alias ls='ls -ahl --color'
+alias grep='grep -Hn --color'
+alias lsp='ps -aux | grep -Z --label="\"ps -aux\" output line "'
+alias sshdb='ssh -i $HOME/.auth/databay/ssh/bheyser.new.osk'
+# alias goto='. goto'
+
+alias gk='gitk&'
+alias gst='git status'
+alias glb='git branch -a'
+alias glr='git remote -vv'
+alias ga='git add'
+
+if [ -d $HOME/bin ]; then
+	PATH=$HOME/bin:$PATH
+	export PATH
+fi
+
+
