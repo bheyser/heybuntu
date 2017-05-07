@@ -1,0 +1,8 @@
+
+#######  heybuntu  #######################
+
+if [ -f /opt/heybuntu/.bash_heybuntu ]; then
+. /opt/heybuntu/.bash_heybuntu
+fi
+
+##########################################
